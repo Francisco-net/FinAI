@@ -1,0 +1,5 @@
+Conservador young start: p50=1,193,754 prob=100.0% aporte_nec=190 total_ap=245,000 ret_real=6.69% vol=2.89%
+Moderado mid career: p50=1,443,199 prob=98.1% aporte_nec=1,114 total_ap=580,000 ret_real=7.34% vol=5.86%
+Arrojado early start: p50=3,025,706 prob=51.1% aporte_nec=1,364 total_ap=640,000 ret_real=7.90% vol=9.12%
+Conservador late start: p50=2,037,228 prob=100.0% aporte_nec=1,556 total_ap=1,100,000 ret_real=6.69% vol=2.89%
+Moderado zero initial: p50=1,221,368 prob=82.2% aporte_nec=803 total_ap=360,000 ret_real=7.34% vol=5.86%

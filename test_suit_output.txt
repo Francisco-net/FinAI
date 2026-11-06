@@ -1,0 +1,7 @@
+Conservador puro: CONSERVADOR (pontuacao 0.0) | travas: none | exp_sugerida: iniciante
+Moderado tipico: ARROJADO (pontuacao 69.6) | travas: none | exp_sugerida: intermediario
+Arrojado ideal: ARROJADO (pontuacao 100.0) | travas: none | exp_sugerida: avancado
+Travas: conhecimento nenhum: MODERADO (pontuacao 73.9) | travas: ['Sem conhecimento prévio de investimentos -> limitado a moderado'] | exp_sugerida: iniciante
+Travas: liquidez alta: MODERADO (pontuacao 87.0) | travas: ['Alta necessidade de liquidez -> limitado a moderado'] | exp_sugerida: avancado
+Limiar conservador/moderado: CONSERVADOR (pontuacao 39.1) | travas: ['Objetivo principal é preservar capital -> limitado a conservador'] | exp_sugerida: iniciante
+Limiar moderado/arrojado: ARROJADO (pontuacao 78.3) | travas: none | exp_sugerida: intermediario

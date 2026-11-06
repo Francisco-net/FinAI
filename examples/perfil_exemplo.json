@@ -1,0 +1,24 @@
+{
+  "idade": 29,
+  "renda_mensal": 7500,
+  "despesas_mensais": 4500,
+  "tipo_renda": "clt",
+  "dependentes": 0,
+  "patrimonio_investido": 35000,
+  "aporte_mensal": 1800,
+  "possui_dividas_caras": false,
+  "perfil_risco": "moderado",
+  "experiencia": "iniciante",
+  "objetivos": [
+    {"nome": "Entrada do apartamento", "valor_alvo": 90000, "prazo_anos": 5, "prioridade": "alta"},
+    {"nome": "Viagem para a Europa", "valor_alvo": 18000, "prazo_anos": 2, "prioridade": "media"},
+    {"nome": "Aposentadoria", "valor_alvo": 2000000, "prazo_anos": 30, "prioridade": "baixa"}
+  ],
+  "preferencias": {
+    "evitar_cripto": true,
+    "evitar_exterior": false,
+    "foco_renda_passiva": false,
+    "prefere_isentos_ir": true
+  },
+  "metodo": "modelo"
+}

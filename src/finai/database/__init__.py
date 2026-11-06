@@ -1,0 +1,75 @@
+"""Database module for FinAI."""
+
+from finai.database.connection import DatabaseManager, get_db_manager, get_session
+from finai.database.models import (
+    User,
+    InvestorProfile,
+    FinancialObjective,
+    Portfolio,
+    Simulation,
+    ChatSession,
+    ChatMessage,
+    MarketData,
+    EconomicIndicator,
+    FinancialKnowledge,
+    Base,
+    UserRole,
+    RiskProfile,
+    IncomeType,
+    ExperienceLevel,
+    PriorityLevel,
+    AllocationMethod,
+    BucketType,
+    SimulationStatus,
+    ChatMessageRole,
+)
+from finai.database.repositories import (
+    UserRepository,
+    InvestorProfileRepository,
+    PortfolioRepository,
+    SimulationRepository,
+    ChatSessionRepository,
+    ChatMessageRepository,
+    MarketDataRepository,
+    EconomicIndicatorRepository,
+    FinancialKnowledgeRepository,
+)
+
+__all__ = [
+    # Connection
+    "DatabaseManager",
+    "get_db_manager",
+    "get_session",
+    # Models
+    "Base",
+    "User",
+    "InvestorProfile",
+    "FinancialObjective",
+    "Portfolio",
+    "Simulation",
+    "ChatSession",
+    "ChatMessage",
+    "MarketData",
+    "EconomicIndicator",
+    "FinancialKnowledge",
+    # Enums
+    "UserRole",
+    "RiskProfile",
+    "IncomeType",
+    "ExperienceLevel",
+    "PriorityLevel",
+    "AllocationMethod",
+    "BucketType",
+    "SimulationStatus",
+    "ChatMessageRole",
+    # Repositories
+    "UserRepository",
+    "InvestorProfileRepository",
+    "PortfolioRepository",
+    "SimulationRepository",
+    "ChatSessionRepository",
+    "ChatMessageRepository",
+    "MarketDataRepository",
+    "EconomicIndicatorRepository",
+    "FinancialKnowledgeRepository",
+]

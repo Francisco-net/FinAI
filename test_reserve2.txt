@@ -1,0 +1,12 @@
+=== Autonomo reserve ===
+Reserva: 13 meses, valor=78000, alocado=50000, falta=28000
+Plano aportes: [('Reserva de emergência', 1500.0, '1_reserva'), ('Aposentadoria', 1369.19, '2_objetivos'), ('Crescimento de patrimônio (longo prazo)', 130.81, '2_objetivos')]
+
+=== Servidor publico reserve ===
+Reserva: 4 meses, valor=24000, alocado=24000, falta=0
+
+=== Sem renda fixa reserve ===
+Reserva: 13 meses, valor=78000, alocado=50000, falta=28000
+
+=== Large patrimonio FGC alert ===
+FGC alerts: ['Ao usar CDB/LCI/LCA, distribua entre instituições: o FGC cobre até R$ 250.000,00 por CPF por instituição (Tesouro Direto não depende do FGC).']

@@ -1,0 +1,27 @@
+Buckets:
+  Reserva de emergência: tipo=reserva alocado=27000 aporte=0 status=Completa
+  Entrada do apartamento: tipo=medio_prazo alocado=8000 aporte=1117 status=No caminho: o aporte cobre a meta
+  Viagem para a Europa: tipo=curto_prazo alocado=0 aporte=683 status=Aporte insuficiente: faltam R$ 23,55/mês
+  Aposentadoria: tipo=longo_prazo alocado=0 aporte=0 status=Aporte insuficiente: faltam R$ 1.605,61/mês
+
+Consolidated:
+  rf_pos: 87.4% (30,600)
+  rf_inflacao: 6.9% (2,400)
+  rf_pre: 2.3% (800)
+  multimercado: 1.1% (400)
+  fii: 0.9% (320)
+  acoes_br: 0.7% (240)
+  internacional: 0.7% (240)
+
+Alertas:
+  'Viagem para a Europa': para chegar a R$ 18.000,00 em 2 anos seriam necessários R$ 706,30/mês. Opções: aumentar o aporte, estender o prazo ou ajustar a meta.
+  'Aposentadoria': para chegar a R$ 2.000.000,00 em 30 anos seriam necessários R$ 1.605,61/mês. Opções: aumentar o aporte, estender o prazo ou ajustar a meta.
+  Cripto removida: volatilidade extrema não é indicada para quem está começando.
+  Crédito privado trocado por Tesouro IPCA+ (mais simples para iniciantes).
+
+Proximos passos:
+  Abra conta em uma corretora regulada pela CVM e com taxa zero para Tesouro Direto e ETFs.
+  Entre em renda variável de forma gradual (ex.: dividir a compra em 3 a 6 meses) para reduzir o risco de entrada.
+  Programe aportes automáticos mensais logo após receber o salário.
+  Rebalanceie a cada 6 meses ou quando uma classe desviar mais de 5 p.p. do alvo.
+  Revise o plano anualmente ou em mudanças de vida (emprego, filhos, casamento, herança).

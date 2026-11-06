@@ -1,0 +1,17 @@
+=== IOF Regressivo (prazos curtos) ===
+  5d: liquido=10,002.31 IOF=14.56 IR=0.67
+  15d: liquido=10,020.43 IOF=26.36 IR=5.93
+  25d: liquido=10,057.30 IOF=14.08 IR=16.64
+  30d: liquido=10,081.93 IOF=0.00 IR=23.79
+
+=== IR Regressivo (prazos longos) ===
+  0.5a: CDB 0.5a liquido=52,635.23 IR=658.81 eq_cdi=100.0%
+  0.5a: Tesouro IPCA+6% 0.5a liquido=52,067.08 IR=516.77 eq_cdi=78.4%
+  1a: CDB 1a liquido=55,630.63 IR=1,194.38 eq_cdi=100.0%
+  1a: Tesouro IPCA+6% 1a liquido=54,386.15 IR=930.40 eq_cdi=77.9%
+  2a: CDB 2a liquido=62,394.37 IR=2,187.24 eq_cdi=100.0%
+  2a: Tesouro IPCA+6% 2a liquido=59,518.64 IR=1,679.76 eq_cdi=76.8%
+  5a: CDB 5a liquido=88,081.65 IR=6,720.29 eq_cdi=100.0%
+  5a: Tesouro IPCA+6% 5a liquido=77,939.16 IR=4,930.44 eq_cdi=73.4%
+  10a: CDB 10a liquido=160,285.92 IR=19,462.22 eq_cdi=100.0%
+  10a: Tesouro IPCA+6% 10a liquido=124,245.29 IR=13,102.11 eq_cdi=67.3%

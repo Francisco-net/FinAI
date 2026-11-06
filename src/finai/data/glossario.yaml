@@ -1,0 +1,185 @@
+# Glossário de conceitos do mercado financeiro (linguagem simples).
+# Chave = termo canônico; "sinonimos" ajudam a busca.
+selic:
+  sinonimos: [taxa selic, juros basicos, copom]
+  definicao: >-
+    Taxa básica de juros da economia, definida pelo Copom (Banco Central) a cada ~45 dias.
+    Serve de referência para todos os outros juros: quando sobe, a renda fixa rende mais e o
+    crédito fica mais caro; quando cai, a renda fixa rende menos e a bolsa tende a se beneficiar.
+cdi:
+  sinonimos: [certificado de deposito interbancario, "% do cdi"]
+  definicao: >-
+    Taxa dos empréstimos de um dia entre bancos, praticamente igual à Selic. É o principal
+    "termômetro" da renda fixa: um CDB que paga 110% do CDI rende 10% a mais que essa taxa.
+ipca:
+  sinonimos: [inflacao, inflação oficial]
+  definicao: >-
+    Índice oficial de inflação do Brasil (IBGE). Mede quanto os preços subiram. Seu investimento
+    só gera ganho real se render acima do IPCA.
+ganho_real:
+  sinonimos: [rentabilidade real, juro real, retorno real]
+  definicao: >-
+    Quanto o investimento rendeu descontada a inflação: (1 + retorno) / (1 + inflação) - 1.
+    Render 10% com inflação de 5% é um ganho real de ~4,8%.
+tesouro_selic:
+  sinonimos: [lft, tesouro direto selic]
+  definicao: >-
+    Título público que rende a Selic. Baixíssimo risco, liquidez diária e quase não oscila.
+    É o investimento clássico para reserva de emergência.
+tesouro_ipca:
+  sinonimos: [tesouro ipca+, ntn-b, ntnb, tesouro renda+, renda+]
+  definicao: >-
+    Título público que paga IPCA + uma taxa fixa. Protege da inflação. Se vendido antes do
+    vencimento, sofre marcação a mercado (pode valer mais ou menos). Ideal para objetivos longos.
+tesouro_prefixado:
+  sinonimos: [ltn, ntn-f]
+  definicao: >-
+    Título público com taxa definida no momento da compra. Você sabe exatamente quanto terá no
+    vencimento. Antes disso, o preço oscila conforme os juros do mercado.
+cdb:
+  sinonimos: [certificado de deposito bancario]
+  definicao: >-
+    Empréstimo que você faz a um banco. Pode ser pós (% do CDI), pré ou IPCA+. Tem IR regressivo
+    e cobertura do FGC até R$ 250 mil por CPF por instituição.
+lci_lca:
+  sinonimos: [lci, lca, letra de credito imobiliario, letra de credito do agronegocio]
+  definicao: >-
+    Títulos bancários lastreados em crédito imobiliário (LCI) ou do agronegócio (LCA). Isentos de
+    IR para pessoa física e cobertos pelo FGC. Costumam ter carência mínima antes do resgate.
+cri_cra:
+  sinonimos: [cri, cra, certificado de recebiveis]
+  definicao: >-
+    Títulos de securitização de recebíveis imobiliários (CRI) ou do agro (CRA). Isentos de IR para
+    PF, mas SEM cobertura do FGC: o risco é do devedor. Exigem análise de crédito.
+debenture_incentivada:
+  sinonimos: [debentures, debênture, lei 12.431, debenture]
+  definicao: >-
+    Dívida emitida por empresas para financiar infraestrutura. Isenta de IR para PF, sem FGC,
+    com risco de crédito e liquidez menor. Diversificar emissores é essencial.
+fgc:
+  sinonimos: [fundo garantidor de creditos, garantia]
+  definicao: >-
+    Fundo que garante até R$ 250 mil por CPF por instituição (teto de R$ 1 milhão a cada 4 anos)
+    em produtos como poupança, CDB, LCI e LCA, caso o banco quebre. Não cobre Tesouro (que é
+    garantido pelo governo), CRI/CRA, debêntures, fundos ou ações.
+liquidez:
+  sinonimos: [resgate, d+0, d+1]
+  definicao: >-
+    Facilidade e velocidade de transformar o investimento em dinheiro sem perder valor. "D+0"
+    significa que o dinheiro cai no mesmo dia; "D+30", em 30 dias.
+marcacao_a_mercado:
+  sinonimos: [mtm, oscilacao de titulos]
+  definicao: >-
+    Atualização diária do preço de um título conforme os juros do mercado. Se os juros sobem, títulos
+    pré e IPCA+ caem de preço (e vice-versa). Só importa se você vender antes do vencimento.
+come_cotas:
+  sinonimos: [come cotas]
+  definicao: >-
+    Antecipação semestral (maio e novembro) do IR em fundos de renda fixa e multimercado. Reduz o
+    efeito dos juros compostos em relação a investir diretamente em títulos.
+ir_regressivo:
+  sinonimos: [imposto de renda renda fixa, tabela regressiva]
+  definicao: >-
+    IR sobre o lucro da renda fixa: 22,5% (até 180 dias), 20% (181-360), 17,5% (361-720) e 15%
+    (acima de 720 dias). Quanto mais tempo investido, menor a alíquota.
+iof:
+  sinonimos: [imposto sobre operacoes financeiras]
+  definicao: >-
+    Imposto sobre o rendimento de resgates em menos de 30 dias, de 96% (1º dia) a 0% (30º dia).
+    Por isso evite resgatar renda fixa recém-aplicada.
+acoes:
+  sinonimos: [acao, bolsa, b3, renda variavel]
+  definicao: >-
+    Pequenas partes de empresas negociadas na bolsa (B3). Ganha-se com valorização e dividendos.
+    Oscilam bastante: são indicadas para prazos longos (5+ anos) e com diversificação.
+etf:
+  sinonimos: [fundo de indice, bova11, ivvb11]
+  definicao: >-
+    Fundo negociado na bolsa que replica um índice (ex.: BOVA11 replica o Ibovespa). Diversificação
+    instantânea com custo baixo. Ótima porta de entrada para renda variável.
+fii:
+  sinonimos: [fundo imobiliario, fundos imobiliarios, ifix, tijolo, papel]
+  definicao: >-
+    Fundos que investem em imóveis (tijolo) ou títulos imobiliários (papel) e distribuem
+    rendimentos, geralmente mensais e isentos de IR para PF (sujeito a regras de enquadramento).
+bdr:
+  sinonimos: [brazilian depositary receipt]
+  definicao: >-
+    Certificado negociado na B3 que representa ações ou ETFs estrangeiros. Forma simples de
+    investir no exterior sem abrir conta fora do Brasil.
+dividendos:
+  sinonimos: [jcp, juros sobre capital proprio, proventos, renda passiva]
+  definicao: >-
+    Parte do lucro distribuída aos acionistas. JCP é outra forma de distribuição, com IR de 15%
+    retido na fonte. Confira a legislação vigente sobre tributação de dividendos.
+dividend_yield:
+  sinonimos: [dy, yield]
+  definicao: >-
+    Dividendos pagos nos últimos 12 meses divididos pelo preço da ação. Um DY alto pode indicar boa
+    pagadora ou apenas que o preço caiu muito: analise a sustentabilidade.
+preco_lucro:
+  sinonimos: [p/l, pl, multiplo]
+  definicao: >-
+    Preço da ação dividido pelo lucro por ação. Indica quantos anos de lucro "pagam" a ação.
+    Útil para comparar empresas do mesmo setor.
+diversificacao:
+  sinonimos: [diversificar, nao colocar ovos na mesma cesta]
+  definicao: >-
+    Distribuir o dinheiro entre classes, setores, emissores e países com comportamentos diferentes,
+    reduzindo o risco total sem necessariamente reduzir o retorno esperado.
+rebalanceamento:
+  sinonimos: [rebalancear]
+  definicao: >-
+    Voltar a carteira para os percentuais-alvo, vendendo o que subiu demais e comprando o que ficou
+    para trás (ou direcionando novos aportes). Regra prática: revisar a cada 6 meses ou quando uma
+    classe desviar mais de 5 pontos percentuais do alvo.
+reserva_de_emergencia:
+  sinonimos: [reserva, colchao, fundo de emergencia]
+  definicao: >-
+    Dinheiro para imprevistos (desemprego, saúde, conserto). De 3 a 12 meses de despesas, em
+    aplicações seguras e de liquidez diária. Deve vir ANTES de investimentos de risco.
+perfil_de_investidor:
+  sinonimos: [suitability, api, analise de perfil, conservador, moderado, arrojado]
+  definicao: >-
+    Classificação (conservador, moderado ou arrojado) exigida pela regulação (CVM) que considera
+    objetivos, prazo, tolerância a perdas, conhecimento e situação financeira, para adequar produtos.
+volatilidade:
+  sinonimos: [risco, oscilacao, desvio padrao]
+  definicao: >-
+    Quanto o preço oscila ao redor da média. Volatilidade de 20% a.a. significa que, em um ano
+    típico, o retorno pode variar cerca de 20 pontos para cima ou para baixo da média esperada.
+juros_compostos:
+  sinonimos: [juros sobre juros]
+  definicao: >-
+    Rendimento que incide sobre o valor já acumulado com rendimentos anteriores. Quanto mais tempo,
+    maior o efeito: tempo e constância de aportes importam mais que o valor inicial.
+multimercado:
+  sinonimos: [fundo multimercado, hedge fund]
+  definicao: >-
+    Fundos com liberdade para investir em juros, câmbio, ações e commodities. Dependem muito da
+    qualidade do gestor. Avalie histórico, taxas (administração e performance) e consistência.
+previdencia_privada:
+  sinonimos: [pgbl, vgbl, previdencia]
+  definicao: >-
+    Produto de longo prazo com vantagens sucessórias (não entra em inventário). PGBL permite deduzir
+    até 12% da renda tributável (declaração completa); VGBL tributa só o rendimento. Atenção às taxas.
+taxa_de_administracao:
+  sinonimos: [taxa de performance, custos, taxas]
+  definicao: >-
+    Percentual cobrado anualmente por fundos sobre o patrimônio. Custos altos corroem o retorno
+    composto: prefira opções baratas, especialmente em renda fixa e índices.
+duration:
+  sinonimos: [prazo medio]
+  definicao: >-
+    Prazo médio ponderado dos fluxos de um título. Quanto maior a duration, mais o preço oscila
+    quando os juros mudam.
+alocacao_de_ativos:
+  sinonimos: [asset allocation, alocacao]
+  definicao: >-
+    Decisão de quanto colocar em cada classe de ativo. Estudos mostram que ela explica a maior parte
+    da variação de retorno de uma carteira no longo prazo, mais do que a escolha de ativos individuais.
+piramide_financeira:
+  sinonimos: [golpe, retorno garantido, esquema ponzi]
+  definicao: >-
+    Esquema fraudulento que paga "rendimentos" com dinheiro de novos entrantes. Sinais: retorno alto
+    e garantido, pressão para indicar pessoas, falta de registro na CVM/Banco Central. Desconfie sempre.

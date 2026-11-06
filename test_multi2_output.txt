@@ -1,0 +1,21 @@
+Buckets:
+  Reserva de emergência: tipo=reserva alocado=64000 aporte=0 status=Completa
+  Reserva: tipo=curto_prazo alocado=45176 aporte=0 status=Meta já coberta pelo patrimônio alocado
+  Faculdade filhos: tipo=longo_prazo alocado=128208 aporte=0 status=Meta já coberta pelo patrimônio alocado
+  Carro: tipo=medio_prazo alocado=65879 aporte=0 status=Meta já coberta pelo patrimônio alocado
+  Aposentadoria: tipo=longo_prazo alocado=196736 aporte=283 status=No caminho: o aporte cobre a meta
+  Crescimento de patrimônio (longo prazo): tipo=longo_prazo alocado=0 aporte=2717 status=Independência financeira / acúmulo de longo prazo
+
+Consolidated:
+  rf_pos: 44.0%
+  rf_inflacao: 16.3%
+  acoes_br: 8.2%
+  internacional: 6.9%
+  rf_pre: 5.9%
+  rf_credito: 5.9%
+  multimercado: 5.9%
+  fii: 5.7%
+  cripto: 1.3%
+
+Alertas:
+  Ao usar CDB/LCI/LCA, distribua entre instituições: o FGC cobre até R$ 250.000,00 por CPF por instituição (Tesouro Direto não depende do FGC).

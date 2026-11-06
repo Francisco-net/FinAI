@@ -1,0 +1,4 @@
+Idade 60: renda_variavel=27.2% | alertas=['Renda variável reduzida em 25% pela idade (proteção de patrimônio).']
+Idade 65: renda_variavel=27.2% | alertas=['Renda variável reduzida em 25% pela idade (proteção de patrimônio).']
+Idade 70: renda_variavel=20.4% | alertas=['Renda variável reduzida em 50% pela idade (proteção de patrimônio).']
+Idade 75: renda_variavel=20.4% | alertas=['Renda variável reduzida em 50% pela idade (proteção de patrimônio).']

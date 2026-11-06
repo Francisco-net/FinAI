@@ -1,0 +1,14 @@
+Buckets:
+  Reserva de emergência: tipo=reserva alocado=64000 aporte=0 status=Completa
+  Reserva: tipo=curto_prazo alocado=36000 aporte=790 status=No caminho: o aporte cobre a meta
+  Faculdade filhos: tipo=longo_prazo alocado=0 aporte=1326 status=No caminho: o aporte cobre a meta
+  Carro: tipo=medio_prazo alocado=0 aporte=884 status=Aporte insuficiente: faltam R$ 1.134,66/mês
+  Aposentadoria: tipo=longo_prazo alocado=0 aporte=0 status=Aporte insuficiente: faltam R$ 1.605,61/mês
+
+Consolidated:
+  rf_pos: 100.0%
+
+Alertas:
+  'Carro': para chegar a R$ 80.000,00 em 3 anos seriam necessários R$ 2.018,86/mês. Opções: aumentar o aporte, estender o prazo ou ajustar a meta.
+  'Aposentadoria': para chegar a R$ 2.000.000,00 em 30 anos seriam necessários R$ 1.605,61/mês. Opções: aumentar o aporte, estender o prazo ou ajustar a meta.
+  Classes pequenas (<5%) agrupadas para simplificar uma carteira em formação.

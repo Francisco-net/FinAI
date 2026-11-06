@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FinAI: chat no terminal",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "finai.cli",
+      "args": ["chat"],
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "FinAI: API (uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["finai.api.main:app", "--reload"],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "FinAI: interface web (Streamlit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app/streamlit_app.py"],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "FinAI: carteira de exemplo",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "finai.cli",
+      "args": ["carteira", "examples/perfil_exemplo.json"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

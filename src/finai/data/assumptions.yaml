@@ -1,0 +1,235 @@
+# =============================================================================
+# Premissas de mercado do FinAI
+# -----------------------------------------------------------------------------
+# Tudo que é "número de mercado" mora aqui, versionado, e não espalhado no código.
+# Revise periodicamente (ex.: a cada reunião do Copom / mudança tributária).
+#
+# Retornos são NOMINAIS ANUAIS ESPERADOS de LONGO PRAZO (cenário-base), não
+# previsões de curto prazo. Volatilidades são anualizadas.
+# =============================================================================
+versao: "2026-11"
+revisado_em: "2026-11-04"
+fonte: >-
+  Premissas próprias de cenário-base (médias de longo prazo inspiradas em
+  históricos de CDI, IPCA, Ibovespa, IFIX e S&P 500 em reais). Não são promessa de retorno.
+
+cenario_base:
+  cdi_longo_prazo: 0.105      # CDI médio esperado no horizonte de planejamento
+  inflacao_longo_prazo: 0.040 # IPCA médio esperado (meta 3% + desvio histórico)
+
+# Valores de referência usados quando a API do Banco Central não está acessível.
+indicadores_fallback:
+  data_referencia: "2026-10-31"
+  selic_meta: 0.15
+  cdi_anual: 0.149
+  ipca_12m: 0.048
+  dolar_ptax: 5.40
+
+classes:
+  rf_pos:
+    nome: Renda Fixa Pós-fixada
+    descricao: Rende próximo do CDI/Selic. Base de liquidez e de baixa oscilação.
+    retorno_esperado: 0.105
+    volatilidade: 0.005
+    risco: 1          # 1 (muito baixo) a 5 (muito alto)
+    liquidez: alta
+    complexidade: baixa
+    veiculos:
+      - Tesouro Selic
+      - CDB de liquidez diária (>= 100% do CDI) em instituição coberta pelo FGC
+      - LCI/LCA pós-fixadas (isentas de IR para pessoa física; atenção à carência)
+      - Fundo DI/Selic com taxa de administração <= 0,3% a.a.
+  rf_pre:
+    nome: Renda Fixa Prefixada
+    descricao: Taxa travada na compra. Ganha se os juros caírem; oscila se vender antes do vencimento.
+    retorno_esperado: 0.110
+    volatilidade: 0.040
+    risco: 2
+    liquidez: media
+    complexidade: baixa
+    veiculos:
+      - Tesouro Prefixado (vencimento compatível com o objetivo)
+      - CDB/LCI/LCA prefixados
+  rf_inflacao:
+    nome: Renda Fixa Atrelada à Inflação
+    descricao: IPCA + taxa real. Protege o poder de compra; ideal para objetivos de longo prazo.
+    retorno_esperado: 0.108
+    volatilidade: 0.060
+    risco: 2
+    liquidez: media
+    complexidade: media
+    veiculos:
+      - Tesouro IPCA+ (vencimento próximo ao objetivo)
+      - Tesouro RendA+ (renda na aposentadoria)
+      - CDB/LCA atrelados ao IPCA
+  rf_credito:
+    nome: Crédito Privado Incentivado
+    descricao: Dívida de empresas (debêntures, CRI, CRA). Prêmio sobre títulos públicos com risco de crédito e menor liquidez.
+    retorno_esperado: 0.115
+    volatilidade: 0.035
+    risco: 3
+    liquidez: baixa
+    complexidade: alta
+    veiculos:
+      - Debêntures incentivadas (Lei 12.431, isentas de IR para PF)
+      - CRI/CRA de emissores com bom rating
+      - Fundos ou ETFs de debêntures incentivadas (diversificação de emissores)
+  multimercado:
+    nome: Multimercado
+    descricao: Fundos com gestão ativa em juros, câmbio, bolsa e commodities. Diversificação de estratégias.
+    retorno_esperado: 0.115
+    volatilidade: 0.060
+    risco: 3
+    liquidez: media
+    complexidade: media
+    veiculos:
+      - Fundos multimercado macro com histórico consistente (> 5 anos) e taxas justas
+  acoes_br:
+    nome: Ações Brasil
+    descricao: Participação em empresas da B3. Maior potencial de retorno no longo prazo, com alta oscilação.
+    retorno_esperado: 0.140
+    volatilidade: 0.250
+    risco: 4
+    liquidez: alta
+    complexidade: media
+    veiculos:
+      - ETF BOVA11 (Ibovespa)
+      - ETF SMAL11 (small caps)
+      - ETF DIVO11 (empresas boas pagadoras de dividendos)
+      - Fundos de ações com gestão ativa (para quem prefere delegar)
+  fii:
+    nome: Fundos Imobiliários
+    descricao: Renda mensal de aluguéis e recebíveis imobiliários; rendimentos isentos de IR para PF (regras de enquadramento).
+    retorno_esperado: 0.125
+    volatilidade: 0.150
+    risco: 3
+    liquidez: media
+    complexidade: media
+    veiculos:
+      - ETF XFIX11 (índice de FIIs)
+      - Carteira diversificada de FIIs de tijolo (lajes, logística, shoppings) e de papel (CRI)
+  internacional:
+    nome: Ações Internacionais
+    descricao: Exposição global e ao dólar. Diversifica o risco-Brasil.
+    retorno_esperado: 0.120
+    volatilidade: 0.180
+    risco: 4
+    liquidez: alta
+    complexidade: media
+    veiculos:
+      - ETF IVVB11 (S&P 500 em reais)
+      - BDRs de ETFs globais (ações do mundo todo)
+      - Conta em corretora no exterior com ETFs globais (para patrimônios maiores)
+  cripto:
+    nome: Criptoativos
+    descricao: Ativos digitais de altíssima volatilidade. Posição pequena e opcional.
+    retorno_esperado: 0.180
+    volatilidade: 0.650
+    risco: 5
+    liquidez: alta
+    complexidade: alta
+    veiculos:
+      - "ETFs de cripto listados na B3 (ex.: HASH11 - índice; QBTC11 - bitcoin)"
+
+# Correlações aproximadas entre classes (simétrica; diagonal = 1).
+# Ordem: rf_pos, rf_pre, rf_inflacao, rf_credito, multimercado, acoes_br, fii, internacional, cripto
+correlacoes:
+  ordem: [rf_pos, rf_pre, rf_inflacao, rf_credito, multimercado, acoes_br, fii, internacional, cripto]
+  matriz:
+    - [1.00, 0.10, 0.05, 0.20, 0.10, 0.00, 0.00, -0.05, 0.00]
+    - [0.10, 1.00, 0.70, 0.40, 0.30, 0.35, 0.40, -0.15, 0.05]
+    - [0.05, 0.70, 1.00, 0.50, 0.30, 0.40, 0.45, -0.10, 0.05]
+    - [0.20, 0.40, 0.50, 1.00, 0.30, 0.30, 0.40, -0.05, 0.05]
+    - [0.10, 0.30, 0.30, 0.30, 1.00, 0.40, 0.30, 0.20, 0.15]
+    - [0.00, 0.35, 0.40, 0.30, 0.40, 1.00, 0.55, 0.10, 0.20]
+    - [0.00, 0.40, 0.45, 0.40, 0.30, 0.55, 1.00, 0.00, 0.10]
+    - [-0.05, -0.15, -0.10, -0.05, 0.20, 0.10, 0.00, 1.00, 0.30]
+    - [0.00, 0.05, 0.05, 0.05, 0.15, 0.20, 0.10, 0.30, 1.00]
+
+# Carteiras-modelo estratégicas (em %) para o patrimônio de LONGO PRAZO.
+carteiras_modelo:
+  conservador:
+    rf_pos: 45
+    rf_inflacao: 25
+    rf_pre: 10
+    rf_credito: 5
+    multimercado: 5
+    acoes_br: 3
+    fii: 4
+    internacional: 3
+    cripto: 0
+  moderado:
+    rf_pos: 25
+    rf_inflacao: 20
+    rf_pre: 7
+    rf_credito: 8
+    multimercado: 8
+    acoes_br: 12
+    fii: 8
+    internacional: 10
+    cripto: 2
+  arrojado:
+    rf_pos: 10
+    rf_inflacao: 15
+    rf_pre: 5
+    rf_credito: 8
+    multimercado: 7
+    acoes_br: 22
+    fii: 10
+    internacional: 20
+    cripto: 3
+
+# Limites por perfil usados pelo otimizador (fração 0-1 por classe) e volatilidade-alvo.
+limites_otimizacao:
+  conservador:
+    volatilidade_alvo: 0.035
+    max_renda_variavel: 0.15   # acoes_br + fii + internacional + cripto
+    min_rf_pos: 0.30
+    max_por_classe: {rf_credito: 0.10, multimercado: 0.10, cripto: 0.0}
+  moderado:
+    volatilidade_alvo: 0.070
+    max_renda_variavel: 0.40
+    min_rf_pos: 0.15
+    max_por_classe: {rf_credito: 0.15, multimercado: 0.15, cripto: 0.03}
+  arrojado:
+    volatilidade_alvo: 0.120
+    max_renda_variavel: 0.70
+    min_rf_pos: 0.05
+    max_por_classe: {rf_credito: 0.15, multimercado: 0.15, cripto: 0.05}
+
+# Reserva de emergência: meses de despesas por tipo de renda.
+reserva_emergencia_meses:
+  servidor_publico: 3
+  clt: 6
+  aposentado: 6
+  autonomo: 12
+  empresario: 12
+  sem_renda_fixa: 12
+meses_extra_por_dependente: 1
+max_meses_reserva: 18
+
+tributacao:
+  # IR regressivo da renda fixa tributada (CDB, Tesouro, debêntures comuns, fundos de RF)
+  ir_regressivo:
+    - {ate_dias: 180, aliquota: 0.225}
+    - {ate_dias: 360, aliquota: 0.200}
+    - {ate_dias: 720, aliquota: 0.175}
+    - {ate_dias: null, aliquota: 0.150}
+  # IOF regressivo sobre o RENDIMENTO para resgates em menos de 30 dias (dia 1..29)
+  iof_regressivo: [96, 93, 90, 86, 83, 80, 76, 73, 70, 66, 63, 60, 56, 53, 50, 46, 43, 40, 36, 33, 30, 26, 23, 20, 16, 13, 10, 6, 3]
+  isentos_pf: [lci, lca, cri, cra, debenture_incentivada, poupanca]
+  custodia_tesouro_anual: 0.002          # taxa B3 sobre Tesouro Direto
+  tesouro_selic_isento_custodia_ate: 10000
+  poupanca:
+    selic_gatilho: 0.085                 # acima disso: 0,5% a.m. + TR
+    rendimento_mensal_acima_gatilho: 0.005
+    fracao_selic_abaixo_gatilho: 0.70
+  acoes_isencao_vendas_mes: 20000        # swing trade: isenção de IR p/ vendas até R$ 20 mil/mês
+  observacoes: >-
+    Regras tributárias mudam. Antes de decisões relevantes, confirme a legislação vigente
+    (ex.: tributação de dividendos acima de R$ 50 mil/mês por empresa introduzida pela Lei 15.270/2025)
+    com a Receita Federal ou um profissional.
+
+fgc:
+  limite_por_cpf_por_instituicao: 250000
+  limite_global_4_anos: 1000000

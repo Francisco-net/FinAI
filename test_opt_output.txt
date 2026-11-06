@@ -1,0 +1,42 @@
+=== Optimizer with different profiles ===
+conservador: renda_variavel=15.6% | retorno_real=6.69% vol=2.77% sharpe=0.17
+  rf_pos: 55.2%
+  rf_inflacao: 18.3%
+  rf_pre: 7.0%
+  acoes_br: 4.8%
+  fii: 4.0%
+  rf_credito: 3.9%
+  multimercado: 3.8%
+  internacional: 3.0%
+
+moderado: renda_variavel=36.1% | retorno_real=7.27% vol=5.51% sharpe=0.19
+  rf_pos: 39.2%
+  rf_inflacao: 14.3%
+  acoes_br: 12.3%
+  internacional: 8.2%
+  fii: 7.2%
+  rf_credito: 6.1%
+  multimercado: 6.0%
+  rf_pre: 4.4%
+  cripto: 2.4%
+
+arrojado: renda_variavel=54.5% | retorno_real=7.78% vol=8.46% sharpe=0.19
+  rf_pos: 27.1%
+  acoes_br: 20.7%
+  internacional: 16.0%
+  rf_inflacao: 10.1%
+  fii: 8.9%
+  rf_credito: 5.7%
+  multimercado: 5.0%
+  cripto: 3.9%
+  rf_pre: 2.6%
+
+=== Optimizer with constraints (evitar cripto, evitar exterior, foco renda passiva) ===
+Constrained arrojado: renda_variavel=40.7% | retorno_real=7.39% vol=7.23% sharpe=0.16
+  rf_pos: 35.7%
+  acoes_br: 20.3%
+  fii: 14.1%
+  rf_inflacao: 12.8%
+  rf_credito: 7.2%
+  multimercado: 6.3%
+  rf_pre: 3.7%
